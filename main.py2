@@ -1,0 +1,16 @@
+from pyscript import document 
+
+def compute(event):
+    fname = document.getElementById("info1").value.strip()
+    lname = document.getElementById("info2").value.strip()
+    score1 = float(document.getElementById("score1").value)
+    score2 = float(document.getElementById("score2").value)
+    score3 = float(document.getElementById("score3").value)
+    score4 = float(document.getElementById("score4").value)
+
+    average = (score1 + score2 + score3 +score4) / 4
+    result = average
+    
+    message = f"Name: {fname}{lname}, Results:{result}"
+    print(message)
+    document.getElementById("message1").innerHTML = message
